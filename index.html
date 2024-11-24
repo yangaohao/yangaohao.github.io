@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>数据可视化</title> -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<!-- <link rel="stylesheet" href=""> -->
+
+<body>
+    <header>
+        <h1>数据可视化</h1>
+        <div class="showtime">
+        </div>
+        <script>
+            var t = null;
+            t = setTimeout(time, 1000);
+            function time() {
+                var date = new Date();
+                var year = date.getFullYear();
+                var month = date.getMonth() + 1;
+                var day = date.getDate();
+                var hour = date.getHours();
+                var minute = date.getMinutes();
+                var second = date.getSeconds();
+                var str = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
+                document.querySelector('.showtime').innerHTML = str;
+                t = setTimeout(time, 1000)
+            };
+        </script>
+    </header>
+    <section class="mainbox">
+        <div class="column">
+            <div class="panel bar">
+                <h1>柱状图</h1>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line">
+                <h1>柱状图</h1>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie">
+                <h1>柱状图</h1>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li>13213</li>
+                        <li>12314</li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li>13213</li>
+                        <li>124213</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 地图 -->
+            <div class="map">
+                <div class="map1"></div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="panel line1">
+                <h1>柱状图</h1>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line2">
+                <h1>柱状图</h1>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line3">
+                <h1>柱状图</h1>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </section>
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
